@@ -359,10 +359,12 @@ export default class AudioReactRecorder extends React.Component {
         track.stop()
       })
     }
+    
+ 
    
-    this.audioInput.disconnect(0)
-    this.analyser.disconnect(0)
-    this.recorder.disconnect(0)
+    this.audioInput && this.audioInput.disconnect(0)
+    this.analyzer && this.analyser.disconnect(0)
+    this.recorder && this.recorder.disconnect(0)
   }
 
   //1 - render
